@@ -28,7 +28,7 @@ List the Java modules in JDK 9:
 
 Build the simple Java application with a local distribution of JDK 9:
 
-    mvn package
+    mvnw package
 
 Build a Docker image containing the simple Java application based of the Docker
 image `jdk-9-debian-slim`:
