@@ -5,4 +5,5 @@ COPY target/helloworld-1.0-SNAPSHOT.jar /opt/helloworld/helloworld-1.0-SNAPSHOT.
 # Set up env variables
 ENV JAVA_HOME=/opt/jdk-9
 ENV PATH=$PATH:$JAVA_HOME/bin
-CMD java -cp /opt/helloworld/helloworld-1.0-SNAPSHOT.jar org.examples.java.App
+CMD java -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap \
+  -cp /opt/helloworld/helloworld-1.0-SNAPSHOT.jar org.examples.java.App

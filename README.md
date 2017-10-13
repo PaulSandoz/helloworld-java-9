@@ -33,11 +33,11 @@ Build the simple Java application with a local distribution of JDK 9:
 Build a Docker image containing the simple Java application based of the Docker
 image `jdk-9-debian-slim`:
 
-    docker build -t helloworld-jdk9 -f helloworld-jdk9.Dockerfile .
+    docker build -t helloworld-jdk-9 -f helloworld-jdk-9.Dockerfile .
 
 Run the java dependency tool `jdeps` on the application jar file:
 
-    docker run -it --rm helloworld-jdk9 jdeps --list-deps /opt/helloworld/helloworld-1.0-SNAPSHOT.jar
+    docker run -it --rm helloworld-jdk-9 jdeps --list-deps /opt/helloworld/helloworld-1.0-SNAPSHOT.jar
 
 Create a custom Java runtime that is small and only contains the `java.base` module:
 (See also the script `create-minimal-java-runtime.sh`):
@@ -63,7 +63,7 @@ List the modules in custom Java runtime:
 
 Run the docker images:
 
-    docker run -it --rm helloworld-jdk9
+    docker run -it --rm helloworld-jdk-9
 
     docker run -it --rm helloworld-jdk-9-base
 
