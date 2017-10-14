@@ -1,14 +1,19 @@
-A simple maven project generated from the using maven-archetype-quickstart
-(org.apache.maven.archetypes:maven-archetype-quickstart:1.0) and updated
+# Hello World with Java 9 and Docker
+
+A simple maven project generated from the using `maven-archetype-quickstart`
+(`org.apache.maven.archetypes:maven-archetype-quickstart:1.0`) and updated
 to declare the maven compiler source and target for Java 9.
 
 Example Docker files are also present for building Docker images
 containing a JDK 9 distribution.
 
+## Pre-requisites
+
 To experiment download the following and place in the top-level directory:
 - OpenJDK build of [JDK 9 for Linux x64](http://download.java.net/java/GA/jdk9/9/binaries/openjdk-9_linux-x64_bin.tar.gz/).
 - Early-access Open JDK build of [JDK 9 for Alpine Linux](http://jdk.java.net/9/ea).
 
+## Build Images and Run Containers
 
 Build a Docker image with Alpine Linux and JDK 9:
 
